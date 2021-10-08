@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', function(){
     const form = document.querySelector('form');
     form.addEventListener('submit', handleFormSubmit);
+
+    const deleteAll = document.querySelector('.delete');
+    deleteAll.addEventListener('click', handleDeleteAll);
 });
 
 const handleFormSubmit = function(event) {
     event.preventDefault();
 
     const previousItems = document.querySelector('#list');
-    const newListItem = document.createElement('div');
+    const newListItem = document.createElement('li');
+    newListItem.classList.add('list-item')
 
     const field1 = document.createElement('h4');
     field1.textContent = `${event.target.field1.value}`;
@@ -29,4 +33,10 @@ const handleFormSubmit = function(event) {
     previousItems.appendChild(newListItem);
 
     this.reset();
+};
+
+const handleDeleteAll = function(event) {
+    event.preventDefault();
+    const previous = document.querySelector('ul');
+    previous.innerHTML = ''; 
 };

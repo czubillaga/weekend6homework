@@ -1,3 +1,13 @@
 #list {
     display: flex;
 }
+
+.list-item {
+    border: 2px solid black;
+    padding: 2vw;
+    margin: 2vw;
+}
+
+li {
+    list-style-type: none;
+}

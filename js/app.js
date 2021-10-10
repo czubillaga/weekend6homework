@@ -13,22 +13,27 @@ const handleFormSubmit = function(event) {
     const newListItem = document.createElement('li');
     newListItem.classList.add('list-item')
 
-    const field1 = document.createElement('h4');
-    field1.textContent = `${event.target.field1.value}`;
+    const title = document.createElement('h4');
+    title.textContent = `${event.target.title.value}`;
     
-    const field2 = document.createElement('h4');
-    field2.textContent = `${event.target.field2.value}`
+    const genre = document.createElement('h4');
+    genre.textContent = `${event.target.genre.value}`
 
-    const field3 = document.createElement('h4');
-    field3.textContent = `${event.target.field3.value}`
+    const type = document.createElement('h4');
+    type.textContent = `${event.target.type.value}`
 
-    const field4 = document.createElement('h4');
-    field4.textContent = `${event.target.field4.value}`
+    // const field4 = document.createElement('h4');
+    // field4.textContent = `${event.target.field4.value}`
 
-    newListItem.appendChild(field1);
-    newListItem.appendChild(field2);
-    newListItem.appendChild(field3);
-    newListItem.appendChild(field4);
+    // const deleteListItem = document.createElement('button');
+    // deleteListItem.textContent = 'Delete';
+    // deleteListItem.addEventListener('click', handleDeleteItem);
+
+    newListItem.appendChild(title);
+    newListItem.appendChild(genre);
+    newListItem.appendChild(type);
+    // newListItem.appendChild(field4);
+    // newListItem.appendChild(deleteListItem);
 
     previousItems.appendChild(newListItem);
 
@@ -40,3 +45,8 @@ const handleDeleteAll = function(event) {
     const previous = document.querySelector('ul');
     previous.innerHTML = ''; 
 };
+
+const handleDeleteItem = function(event) {
+    event.preventDefault();
+    event.target.parentNode.innerHTML = '';
+}

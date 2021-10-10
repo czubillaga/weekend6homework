@@ -1,13 +1,36 @@
 #list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .list-item {
     border: 2px solid black;
     padding: 2vw;
     margin: 2vw;
+    min-width: 10vw;
+    box-shadow: 5px 10px 8px #01504c;
+    background-color: white;
+    color: teal;
 }
 
 li {
     list-style-type: none;
 }
+
+form {
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    font-family: 'Abril Fatface';
+    font-size: 4vw;
+}
+
+body {
+    background-color: teal;
+    color: white;
+    font-family: 'Abril Fatface';
+}
+
+

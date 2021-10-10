@@ -4,38 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyList</title>
+    <title>My Watchlist</title>
     <script src='js/app.js'></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Akronim&display=swap');
+    </style>
 </head>
 <body>
-    <h1>Mylist</h1>
+    <h1 id="header">Add to Watchlist</h1>
     <form class='form'>
         <div class='field'>
-            <label for="field1">Field 1</label>
-            <input type="text" id="field1">
+            <label for="title"></label>
+            <input type="text" id="title" placeholder="Title" required>
         </div><br>
         <div class='field'>
-            <label for="field2">Field 2</label>
-            <input type="text" id="field2">
+            <label for="genre"></label>
+            <input type="text" id="genre" placeholder="Genre" required>
         </div><br>
         <div class='field'>
-            <label for="field3">Field 3</label>
-            <input type="text" id="field3">
-        </div><br>
-        <div class='field'>
-            <label for="field4">Field 4</label>
-            <input type="text" id="field4">
+            <label for="type"></label>
+            <input type="text" id="type" placeholder="Type" required>
         </div><br>
         <div class="submit">
-            <input type="submit" value="Submit">
+            <input type="submit" value="Add">
         </div><br>
         <div class="delete">
-            <button>Delete All</button>
+            <button>Clear Watchlist</button>
         </div>
        
     </form>
-    <h1>Previous Items</h1>
+    <h1>My Watchlist</h1>
     <ul id='list'></ul>
     
 </body>
